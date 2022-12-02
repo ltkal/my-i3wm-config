@@ -44,7 +44,7 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 
 call plug#begin()
-Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline'
 Plug 'connorholyday/vim-snazzy'
 
 
@@ -118,6 +118,15 @@ Plug 'w0rp/ale'
 
 Plug 'jiangmiao/auto-pairs'
 
+Plug 'rkulla/pydiction'
+
+
+Plug 'yodiaditya/vim-pydjango'
+
+
+
+Plug 'cjrh/vim-conda'
+
 
 
 call plug#end()
@@ -125,7 +134,9 @@ call plug#end()
 let g:AutoPairsMapCR = 1
 
 
-
+filetype plugin on
+let g:pydiction_location = '/home/scorpion/.vim/plugged/pydiction/complete-dict'
+let g:pydiction_menu_height = 3
 
 
 
@@ -138,7 +149,7 @@ let g:ale_linters = {
   \   'csh': ['shell'],
   \   'zsh': ['shell'],
   \   'go': ['gofmt', 'golint'],
-  \   'python': ['flake8', 'mypy', 'pylint'],
+  \   'python': ['mypy', 'pylint'],
   \   'c': ['gcc', 'cppcheck'],
   \   'cpp': ['g++', 'cppcheck'],
   \   'text': [],
@@ -149,7 +160,7 @@ let g:ale_lint_delay = 500
 let g:ale_echo_msg_format = '[%linter%] %code: %%s'
 let g:ale_lint_on_text_changed = 'normal'
 let g:ale_lint_on_insert_leave = 1
-let g:airline#extensions#ale#enabled = 1
+let g:lightline#extensions#ale#enabled = 1
 let g:ale_c_gcc_options = '-Wall -O2 -std=c99'
 let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++17'
 let g:ale_c_cppcheck_options = ''
@@ -179,8 +190,8 @@ set shiftwidth=4
 "set autoindent
 set smartindent
 
-
-
+:colorscheme default
+"set bg = light
 
 let g:lightline = {
       \ 'colorscheme': 'one',
@@ -263,7 +274,7 @@ let g:mkdp_auto_close = 1
 let g:mkdp_refresh_slow = 0
 let g:mkdp_command_for_global = 0
 let g:mkdp_open_to_the_world = 0
-let g:mkdp_open_ip = ''
+let g:mkdp_open_ip = '127.0.0.1'
 let g:mkdp_browser = 'google-chrome-stable'
 let g:mkdp_echo_preview_url = 0
 let g:mkdp_browserfunc = ''
@@ -278,7 +289,7 @@ let g:mkdp_preview_options = {
     \ }
 let g:mkdp_markdown_css = ''
 let g:mkdp_highlight_css = ''
-let g:mkdp_port = ''
+let g:mkdp_port = '5890'
 let g:mkdp_page_title = '「${name}」'
 
 
