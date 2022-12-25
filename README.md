@@ -3,4 +3,4 @@
 
 ## i3
 
-![avatar](2.png)
+![avatar](source/2.png)
