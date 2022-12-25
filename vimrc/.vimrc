@@ -129,6 +129,11 @@ Plug 'cjrh/vim-conda'
 
 
 
+Plug 'OmniSharp/omnisharp-vim'
+
+Plug 'tpope/vim-dispatch'
+
+
 call plug#end()
 
 let g:AutoPairsMapCR = 1
@@ -139,9 +144,13 @@ let g:pydiction_location = '/home/scorpion/.vim/plugged/pydiction/complete-dict'
 let g:pydiction_menu_height = 3
 
 
+filetype indent plugin on
+syntax enable
 
 
 
+let g:OmniSharp_server_use_mono = 1
+"let g:OmniSharp_server_path = "/usr/lib/omnisharp/OmniSharp.exe"
 
 
 let g:ale_linters_explicit = 1
