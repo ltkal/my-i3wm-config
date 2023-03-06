@@ -133,6 +133,11 @@ Plug 'OmniSharp/omnisharp-vim'
 
 Plug 'tpope/vim-dispatch'
 
+Plug 'fatih/vim-go'
+
+Plug 'davidhalter/jedi-vim'
+
+
 
 call plug#end()
 
