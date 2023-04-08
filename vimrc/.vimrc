@@ -41,12 +41,17 @@ set laststatus=2
 set autochdir
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
+set nocompatible
+set hidden
+set encoding=utf-8
+
+
 
 
 call plug#begin()
 "Plug 'vim-airline/vim-airline'
 Plug 'connorholyday/vim-snazzy'
-
+Plug 'vim-ctrlspace/vim-ctrlspace'
 
 
 " File navigation
@@ -139,6 +144,9 @@ Plug 'davidhalter/jedi-vim'
 
 
 
+Plug 'ashfinal/vim-colors-violet'
+
+
 call plug#end()
 
 let g:AutoPairsMapCR = 1
@@ -204,15 +212,15 @@ set shiftwidth=4
 "set autoindent
 set smartindent
 
-:colorscheme default
+:colorscheme violet
 "set bg = light
 
 let g:lightline = {
-      \ 'colorscheme': 'one',
-      \ }
+\ 'colorscheme': 'PaperColor',
+\ }
 
 
-
+"let g:airline#extensions#tabline#formatter = 'ctrlspace'
 
 
 
